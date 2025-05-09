@@ -1,0 +1,23 @@
+{
+    "name": "gerenciador-estudos",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nascimentodeveloper/FocusFox.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nascimentodeveloper/FocusFox/issues"
+    },
+    "homepage": "https://github.com/nascimentodeveloper/FocusFox#readme",
+    "dependencies": {
+        "electron": "^36.2.0"
+    }
+}

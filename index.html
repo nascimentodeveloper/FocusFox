@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerenciador de Estudos</h1>
+            <button id="toggle-theme" class="btn">🌙 Modo Escuro</button>
+        </header>
+
+        <section id="pomodoro-section">
+            <div class="pomodoro-container">
+                <h1>Pomodoro Timer</h1>
+                <div id="timer">
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                    <span id="time-display">25:00</span>
+
+                    <button id="startButton" onclick="startPomodoro()" class="btn">Iniciar Pomodoro</button>
+                    <button id="pauseButton" onclick="pausePomodoro()" disabled class="btn">Pausar</button>
+                    <button id="resumeButton" onclick="resumePomodoro()" disabled class="btn">Retomar</button>
+                    <button id="stopButton" onclick="stopPomodoro()" disabled class="btn">Interromper</button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <form id="task-form">
+                    <input type="text" id="name" placeholder="Nome da Tarefa" required />
+                    <input type="text" id="category" placeholder="Categoria/Disciplina" required />
+                    <textarea id="description" placeholder="Descrição..."></textarea>
+                    <input type="number" id="pomodoros" placeholder="Pomodoros estimados" min="1" required />
+                    <button type="submit" class="btn">Salvar Tarefa</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="task-section">
+            <h2>Tarefas Cadastradas</h2>
+
+            <div class="filter-container">
+                <label for="category-filter">Filtrar por categoria:</label>
+                <input type="text" id="category-filter" placeholder="Ex: Matemática" />
+            </div>
+
+            <ul id="task-list"></ul>
+        </section>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
